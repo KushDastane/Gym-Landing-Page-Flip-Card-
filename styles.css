@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+}
+strong{
+    font-weight: bold;
+}
+
+html,body{
+    line-height: 1.8em;
+    font-family: "Raleway", sans-serif;
+}
+
+.pimg1{
+    background-image: url(images/gym.jpg);
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+.pimg1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ptext{
+    position:absolute;
+    width: 100%;
+    top: 50%;
+    font-size: 70px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    letter-spacing: 8px;
+    text-transform: capitalize;
+}
+
+/* section2  */
+
+.ftext{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 8px;
+    color: white;
+    background-color: black;
+    padding: 50px;
+    text-transform: uppercase;
+}
+
+/* section 3 */
+.sec3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 100px;
+}
+
+article{
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgba(0, 0, 0, 0.099);
+    border-radius: 10px;
+    flex: 1;
+    justify-content: center;
+    /* padding: 20px; */
+    margin: 5px 5px;
+    box-shadow: 1px 7px 3px rgba(0, 0, 0, 0.211);
+}
+article p,h2{
+    text-align: center;
+    padding: 10px;
+}
+article h2{
+    font-weight: bold;
+}
+article img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    /* width: calc(100% + 40px);
+    margin: -20px; */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* flip */
+
+.boxcontainer{
+    width: 350px;
+    height: 420px;
+    position: relative;
+    margin-top: 30px;
+}
+.box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+}
+
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding:20px;
+    justify-content: center;
+    text-align: center;
+}
+.back h2{
+    font-size: 40px;
+    margin: 20px;
+}
+
+.box:hover{
+    transform: rotateY(180deg);
+}
+
+.benefits{
+    list-style: none;
+}
+
+.plans{
+    list-style:none;
+    padding: 0;
+    font-size: 15px;
+    
+}
+
+.plans li{
+    margin-bottom: 10px;
+}
+
+.plans span{
+    display: block;
+    color: rgb(78, 76, 76);
+}
+
+
+/* section 4 */
+
+.sec4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+.sec4 div{
+    flex: 1;
+}
+.contactinfo{
+    list-style: none;
+    text-align: center;
+}
+.social{
+    list-style: none;
+    text-align: center;
+}
+.sec4 p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sec4 h2{
+    font-size: 2rem;
+    font-weight:bold;
+}
+
+.contact{
+    background-color: rgb(82, 48, 4);
+    padding:10px;
+}
+.about{
+    background-color: rgb(68, 12, 7);
+    padding:10px;
+}
+.address{
+    background-color: rgb(3, 3, 77);
+    padding:10px;
+}
+.media{
+    background-color: rgb(22, 55, 3);
+    padding:10px;
+}
+.contact, .about, .address, .media{
+    min-height: 250px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+    padding: 20px;
+}
+
+/* responsiveness */
+@media(max-width:800px){
+    .pimg1{
+        min-height: 50vh;
+    }
+    .ptext{
+        font-size: 32px;
+    }
+    .ftext{
+        font-size: 22px;
+    }
+    .sec3{
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .sec4{
+        flex-direction: column;
+    }
+}
